@@ -8,9 +8,14 @@
 
 - Font weights
 Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700;
 
 - Line heights:
 Default: 1
+Small: 1.05
+Paragraph: 1.6
 
 --- 02 Colors
 
@@ -25,6 +30,8 @@ Default: 1
 --- 05 Shadows
 
 --- 06 Border radius
+
+Default 9px
 
 --- 07 White spaces
 
@@ -56,6 +63,26 @@ body {
 /******************************/
 /* General Reuseable component*/
 /******************************/
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -123,8 +150,45 @@ body {
 .logo {
   height: 2.2rem;
 }
+
 /******************************/
-/* Hero */
+/* Navigation */
+/******************************/
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+
+  align-items: center;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/******************************/
+/* Hero Section*/
 /******************************/
 .section-hero {
   /* Tint and shade Generator */
@@ -180,4 +244,17 @@ body {
 }
 .delivered-text span {
   color: #cf711f;
+}
+
+/******************************/
+/* How It Works Section*/
+/******************************/
+.section-how {
+  background-color: #cf711f;
+  padding: 3.2rem;
+}
+
+.section-how div div {
+  background-color: blue;
+  padding: 3.2rem;
 }
